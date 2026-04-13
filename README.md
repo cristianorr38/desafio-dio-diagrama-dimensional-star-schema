@@ -170,6 +170,64 @@ CREATE TABLE Fato_Atuacao_Professor (
 
 ---
 
+🗂️ Diagrama Star Schema (Mermaid)
+
+    Fato_Atuacao_Professor {
+        INT sk_professor
+        INT sk_departamento
+        INT sk_disciplina
+        INT sk_curso
+        INT sk_data_oferta
+        INT carga_horaria_lecionada
+        INT qtd_ofertas
+    }
+
+    Dim_Professor {
+        INT sk_professor PK
+        INT nk_idProfessor
+        VARCHAR nome_professor
+        VARCHAR titulacao
+        BOOLEAN is_coordenador
+    }
+
+    Dim_Departamento {
+        INT sk_departamento PK
+        INT nk_idDepartamento
+        VARCHAR nome_departamento
+        VARCHAR campus
+    }
+
+    Dim_Disciplina {
+        INT sk_disciplina PK
+        INT nk_idDisciplina
+        VARCHAR nome_disciplina
+        INT carga_horaria_padrao
+    }
+
+    Dim_Curso {
+        INT sk_curso PK
+        INT nk_idCurso
+        VARCHAR nome_curso
+    }
+
+    Dim_Data {
+        INT sk_data PK
+        DATE data_completa
+        INT ano
+        INT semestre
+        INT trimestre
+        INT mes_numero
+        VARCHAR nome_mes
+    }
+
+    Fato_Atuacao_Professor }o--|| Dim_Professor : "professor"
+    Fato_Atuacao_Professor }o--|| Dim_Departamento : "departamento"
+    Fato_Atuacao_Professor }o--|| Dim_Disciplina : "disciplina"
+    Fato_Atuacao_Professor }o--|| Dim_Curso : "curso"
+    Fato_Atuacao_Professor }o--|| Dim_Data : "data_oferta"
+
+---
+
 ## 📜 Licença
 Este projeto está licenciado sob a **MIT License**.  
 Sinta-se livre para usar, modificar e compartilhar, mantendo os créditos ao autor.
