@@ -17,7 +17,6 @@ O foco é a **tabela fato Fato_Atuacao_Professor**, que reflete o evento de um p
 
 <img width="1465" height="859" alt="Diagrama_exemplo" src="https://github.com/user-attachments/assets/f0c5df1a-0d62-42a3-8a14-c9f976da51a8" />
 
-
 ---
 
 ## 📐 Estrutura do Modelo Dimensilnal
@@ -70,9 +69,14 @@ Granularidade: oferta de uma disciplina por um professor, para um curso específ
 ```plaintext
 📂     desafio-dio-diagrama-dimensional-star-schema
 ├── 📂 data
-│   ├── 📄 
-│   └── 📄 
+│   ├── 📄 Descricao Desafio.docx
+│   ├── 📄 Diagrama_exemplo.png
+|   ├── 📄 Modelo Dimensiona - Star Schema - Atuacao Professores.mwb
+|   └── 📄 Modelo_Dimensional_Atuacao_professor.png
 │
+├── 📂 data
+|    └── 📄 Script SQL para o Modelo Dimensional (Star Schema).txt
+|
 └── 📄 README.md
 ```
 
@@ -96,7 +100,7 @@ Progresso atual:
 
 ---
 
-## 📜 Script SQL (Resumo)
+## 📜 Script SQL
 
 ```sql
 -- 1. Criar o Schema/Banco de Dados
