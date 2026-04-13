@@ -105,8 +105,8 @@ Progresso atual:
 ```sql
 -- 1. Criar o Schema/Banco de Dados
 
-CREATE DATABASE IF NOT EXISTS dw_universidade;
-USE dw_universidade;
+CREATE DATABASE IF NOT EXISTS star_schema_atuacao_professor;
+USE star_schema_atuacao_professor;
 
 -- 2. Criar Tabelas de Dimensão
 
