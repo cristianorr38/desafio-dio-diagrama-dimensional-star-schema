@@ -82,6 +82,9 @@ Granularidade: oferta de uma disciplina por um professor, para um curso específ
 - [x] Criação das dimensões principais (Professor, Departamento, Disciplina, Curso)  
 - [x] Inclusão da dimensão de tempo (Data)
 
+Progresso atual:  
+`█████████████████████` **100% Concluído**
+
 ---
 
 ## 📦 Release
@@ -90,13 +93,6 @@ Granularidade: oferta de uma disciplina por um professor, para um curso específ
 - Estrutura inicial do **Data Warehouse** criada  
 - Script SQL para criação das tabelas incluído  
 - Modelo dimensional documentado  
-
----
-
-## 📊 Barra de Progresso
-
-Progresso atual:  
-`█████████████████████` **100% Concluído**
 
 ---
 
@@ -166,3 +162,10 @@ CREATE TABLE Fato_Atuacao_Professor (
     CONSTRAINT fk_fato_curso FOREIGN KEY (sk_curso) REFERENCES Dim_Curso(sk_curso),
     CONSTRAINT fk_fato_data FOREIGN KEY (sk_data_oferta) REFERENCES Dim_Data(sk_data)
 );
+```
+
+---
+
+## 📜 Licença
+Este projeto está licenciado sob a **MIT License**.  
+Sinta-se livre para usar, modificar e compartilhar, mantendo os créditos ao autor.
